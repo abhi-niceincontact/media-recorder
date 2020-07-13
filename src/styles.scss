@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.w-100-p {
+  width: 100%;
+}
+.h-100-p {
+  height: 100%;
+}
+.p-24 {
+  padding: 24px;
+}
+.p-16 {
+  padding: 16px;
+}
+.p-8 {
+  padding: 8px;
+}
+.pt-16 {
+  padding-top: 16px;
+}
+.pb-16 {
+  padding-bottom: 16px;
+}
+.pr-16 {
+  padding-right: 16px;
+}
+.pl-16 {
+  padding-left: 16px;
+}
+.m-24 {
+  margin: 24px;
+}
+.m-16 {
+  margin: 16px;
+}
+.mr-16 {
+  margin-right: 16px;
+}
+.ml-16 {
+  margin-left: 16px;
+}
+.mr-8 {
+  margin-right: 8px;
+}
+.ml-8 {
+  margin-left: 8px;
+}
+.mt-16{
+  margin-top:16px;
+}
+
+.bg-darker {
+  background-color: rgba(0,0,0, 0.015);
+}
+
+.border-all {
+  border: 1px solid #ddd;
+}
+
+.border-top {
+  border-top: 1px solid #ddd;
+}
+.border-bottom {
+  border-bottom: 1px solid #ddd;
+}
+.border-left {
+  border-left: 1px solid #ddd;
+}
+.border-right {
+  border-right: 1px solid #ddd;
+}

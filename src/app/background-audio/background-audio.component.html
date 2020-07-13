@@ -1,0 +1,9 @@
+<div class="w-100-p border-bottom p-8" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="8px">
+  <div class="w-100-p" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+    <span fxFlex>{{clip.name}}</span>
+    <!-- <button color="warn" mat-icon-button (click)="onDeleteClip()"><mat-icon>delete</mat-icon></button> -->
+  </div>
+  <div class="w-100-p" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+    <audio controls loop fxFlex [src]="getAudioUrl()"></audio>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="w-100-p" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="16px">
+  <button fxFlex color="primary" type="button" mat-raised-button
+  [disabled]="startDisabled" (click)="onStart();">
+    <mat-icon class="mr-8">mic</mat-icon>Record
+  </button>
+  <button color="accent" fxFlex type="button" [disabled]="!startDisabled" mat-raised-button (click)="onTooglePause();">
+    <ng-container *ngIf="!isPaused"><mat-icon class="mr-8">pause</mat-icon>Pause</ng-container>
+    <ng-container *ngIf="isPaused"><mat-icon class="mr-8">play_arrow</mat-icon>Resume</ng-container>
+  </button>
+  <button fxFlex type="button" [disabled]="!startDisabled" mat-raised-button (click)="onStop();">
+    <mat-icon class="mr-8">stop</mat-icon>Stop
+  </button>
+</div>

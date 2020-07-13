@@ -1,0 +1,36 @@
+<div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="16px">
+  <!-- Header -->
+  <div class="w-100-p mat-elevation-z2" fxLayout="row" fxLayoutAlign="start start">
+    <mat-toolbar color="primary">
+      <span>Audio Recorder & Noise Mixer</span>
+    </mat-toolbar>
+  </div>
+  <!-- Content -->
+  <div class="w-100-p p-24 pt-16" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="36px">
+    <!-- Recoder -->
+    <div fxFlex="60%" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="8px">
+      <div class="mat-title">Recorder</div>
+      <app-waveform #waveform></app-waveform>
+      <app-microphone [waveform]="waveform" (stop)="onRecordingStop($event)"></app-microphone>
+
+      <div class="w-100-p border-top mt-16" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="4px">
+        <div class="mat-title">Recorded Clips</div>
+        <ng-container *ngFor="let clip of recordeClips;">
+          <app-recorded-clips [clip]="clip" (delete)="onDeleteClip(clip)"></app-recorded-clips>
+        </ng-container>
+      </div>
+    </div>
+    <!-- Background -->
+    <div fxFlex="40%" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="8px">
+      <div class="w-100-p" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="8px">
+        <span class="mat-title">Background Nosies</span>
+        <a href="https://github.com/microsoft/MS-SNSD" target="blank">Microsoft Scalable Noisy Speech Dataset (MS-SNSD)</a>
+      </div>
+      <div class="w-100-p border-all bg-darker" style="height: calc(100vh - 170px); overflow-y: auto; border-radius: 4px;">
+        <ng-container *ngFor="let clip of backgroundClips;">
+          <app-background-audio [clip]="clip"></app-background-audio>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

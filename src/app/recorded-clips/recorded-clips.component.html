@@ -1,0 +1,19 @@
+<div class="w-100-p border-bottom p-8" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="8px">
+  <div class="w-100-p" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+    <span fxFlex>{{clip.name}}</span>
+    <mat-form-field>
+      <mat-label>Mix with background noise</mat-label>
+      <mat-select [(ngModel)]="selected">
+        <mat-option *ngFor="let noise of backgroundClips" [value]="noise">
+          {{noise.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button color="accent" mat-mini-fab *ngIf="!(isMixPlaying$ | async)" (click)="onStartMixClip()"><mat-icon>play_arrow</mat-icon></button>
+    <button color="warn" mat-mini-fab *ngIf="isMixPlaying$ | async" (click)="onStopMixClip()"><mat-icon>stop</mat-icon></button>
+    <button color="warn" mat-icon-button (click)="onDeleteClip()"><mat-icon>delete</mat-icon></button>
+  </div>
+  <div class="w-100-p" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+    <audio [controls]="true" fxFlex [src]="getAudioUrl()"></audio>
+  </div>
+</div>

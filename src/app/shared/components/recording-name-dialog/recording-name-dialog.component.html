@@ -1,0 +1,12 @@
+<!-- <h1 mat-dialog-title>Enter a name for your sound clip?</h1> -->
+<div mat-dialog-content>
+  <p>Enter a name for your sound clip?</p>
+  <mat-form-field class="w-100-p">
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button color="primary" mat-raised-button [mat-dialog-close]="data.name" cdkFocusInitial>Ok</button>
+  <button mat-button (click)="onClose()">Cancel</button>
+</div>
