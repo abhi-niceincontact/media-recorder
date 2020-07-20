@@ -4,6 +4,6 @@
     <!-- <button color="warn" mat-icon-button (click)="onDeleteClip()"><mat-icon>delete</mat-icon></button> -->
   </div>
   <div class="w-100-p" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
-    <audio controls loop fxFlex [src]="getAudioUrl()"></audio>
+    <audio controls [loop]="loop" fxFlex [src]="getAudioUrl()"></audio>
   </div>
 </div>

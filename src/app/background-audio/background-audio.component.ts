@@ -11,6 +11,7 @@ import { SafeUrl, DomSanitizer } from '@angular/platform-browser';
 export class BackgroundAudioComponent {
 
   @Input() clip: IClip;
+  @Input() loop: boolean;
   @Output() delete = new EventEmitter<void>();
 
 

@@ -4,6 +4,7 @@ import { IClip } from './models/clip.model';
 import { MatDialog } from '@angular/material/dialog';
 import { RecordingNameDialogComponent } from './shared/components/recording-name-dialog/recording-name-dialog.component';
 import { backgroundAudios } from './models/background-audio';
+import { spokenDigitsDataset } from './models/spoken-digits';
 
 
 declare const RecordRTC: any;
@@ -19,6 +20,7 @@ export class AppComponent implements OnInit {
   audioChunks = [];
   recordeClips: IClip[] = [];
   backgroundClips = [...backgroundAudios];
+  spokenDigitsClips = [...spokenDigitsDataset];
 
   constructor(public dialog: MatDialog) { }
 
