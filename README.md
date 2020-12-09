@@ -1,10 +1,10 @@
-# ActionDynamicForms
+# MediaRecorder
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
 
-## The Goal of Action Dynamic Forms
+## The Goal of Media Recorder
 
-The ActionDynamicForms creates dynamic form using JSON schema.
+The Media Recorder can be used to record audio and mix with background noise.
 
 # Getting Started - Local Development
 
@@ -29,27 +29,6 @@ yarn
 yarn start
 ```
 ![Demo App Screenshot](docs/images/demo-app.PNG)
-
-# Form Field JSON Schema
-
-The form is generated from array of IFormFieldConfig object:
-
-## IFormFieldConfig
-
-| Property | Type | Description | Examples |
-|---|---|---|---|
-**type** | FormFieldType (required) | Type of the field. | 'input' &#124; 'textarea' &#124; 'checkbox' &#124; 'radio' &#124; 'select'
-**label** | string (optional) | Label of the field. | 
-**name** | string (required) | Form/Model name of the field. | 
-**inputType** | string | Type of input field. | 'text' &#124; 'email' &#124; 'number'
-**options** | TextValuePair[] (optional) | Array of values for select, radio form field. | `[{ "value": true, "text": "Yes"},{ "value": false, "text": "No"}]`
-**value** | any (optional) | Initial value of the field. | 
-**required** | boolean (optional) | Whether the form field is required. | 
-**size** | string (optional) | Width of the form field. | `100% or 200px`
-**minLength** | number (optional) | Min length of the input form field. | 
-**maxLength** | number (optional) | Max length of the input form field. | 
-**hint** | string (optional) | Text for the form field hint. | 
-
 
 ## Development server
 
