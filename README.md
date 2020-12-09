@@ -21,7 +21,7 @@ npm install -g @angular/cli
 ```
 5. Run `yarn` (no arguments) from the root of your clone of this project to install dependencies.
 ```shell
-cd <path-to-action-dynamic-form-folder>
+cd <path-to-media-recorder-folder>
 yarn
 ```
 6. Run `yarn start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
